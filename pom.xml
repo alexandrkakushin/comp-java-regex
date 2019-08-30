@@ -7,8 +7,8 @@
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
 
         <compile.debug>true</compile.debug>
         <compile.optimize>true</compile.optimize>
@@ -16,7 +16,20 @@
         <content.encoding>utf-8</content.encoding>
 
         <finalname>regex</finalname>
+
+        <jaxws.version>2.3.2</jaxws.version>
+
+        <maven-compiler.version>3.8.0</maven-compiler.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>jaxws-ri</artifactId>
+            <version>${jaxws.version}</version>
+            <type>pom</type>
+        </dependency>      
+    </dependencies>
 
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -24,6 +37,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler.version}</version>
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
