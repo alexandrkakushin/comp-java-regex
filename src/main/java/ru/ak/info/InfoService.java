@@ -1,14 +1,13 @@
 package ru.ak.info;
 
-import ru.ak.model.Build;
-import ru.ak.regex.RegexClient;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlElement;
+
+import ru.ak.regex.RegexClient;
 
 /**
  * Корневой Web-сервис, содержащий метод получения версии
